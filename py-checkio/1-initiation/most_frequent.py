@@ -16,19 +16,24 @@ def most_frequent(data: list) -> str:
     c = Counter(data)
     previous = 0
     for k, v in c.items():
-        print(k, v)
         if v > previous:
             most_frequent = k
         previous = v
     return most_frequent
 
+# Clear
+from statistics import mode
+def most_frequent(data):
+    return mode(data)
+
+# Speedy
+def most_frequent(data):
+    return max(set(data), key=data.count)
 
 if __name__ == "__main__":
     # These "asserts" using only for self-checking and not necessary for auto-testing
     print("Example:")
     print(most_frequent(["a", "b", "c", "a", "b", "a"]))
-
     assert most_frequent(["a", "b", "c", "a", "b", "a"]) == "a"
-
     assert most_frequent(["a", "a", "bi", "bi", "bi"]) == "bi"
     print("Done")

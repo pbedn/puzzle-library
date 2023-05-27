@@ -2,6 +2,8 @@
 
 Algorithmic puzzles from various sources.
 
+#### py-checkio
+* https://py.checkio.org
 
-py-checkio - https://py.checkio.org
-freecodecamp-js-algorithms - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
+#### freecodecamp-js-algorithms
+* https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/

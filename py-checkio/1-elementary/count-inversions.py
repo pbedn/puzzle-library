@@ -35,7 +35,7 @@ def count_inversion(sequence):
 
 ##
 import itertools as it
-​
+
 def count_inversion(sequence):
     return sum(x > y for x, y in it.combinations(sequence, 2))
 
