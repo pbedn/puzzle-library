@@ -13,27 +13,11 @@ Input: The text and the search words array.
 
 Output: The dictionary where the search words are the keys and values are the number of times when those words are occurring in a given text.
 
-Example:
-
-popular_words(
-When I was One
-I had just begun
-When I was Two
-I was nearly new
-
-, ['i', 'was', 'three', 'near']) == {
-    'i': 4,
-    'was': 3,
-    'three': 0,
-    'near': 0
-}
-
 Precondition:
 The input text will consists of English letters in uppercase and lowercase and whitespaces.
 """
 
 from collections import Counter
-
 
 def popular_words(text: str, words: list) -> dict:
     txt = text.lower().replace("\n", " ").split(" ")
@@ -44,6 +28,20 @@ def popular_words(text: str, words: list) -> dict:
         if key in words:
             res[key] = value
     return res
+
+def popular_words(text: str, words: list) -> dict:
+    ct = Counter(text.lower().replace("\n", " ").split(" "))
+    return {word: ct.get(word, 0) for word in words}
+
+# CLEAR
+# def popular_words(text: str, words: list) -> dict:
+#     popularity = Counter(text.lower().split())
+#
+#     result = {}
+#     for word in words:
+#         result[word] = popularity[word]
+#
+#     return result
 
 
 if __name__ == "__main__":
@@ -74,17 +72,3 @@ I was nearly new
         == {"i": 4, "was": 3, "three": 0, "near": 0}
     )
     print("Coding complete? Click 'Check' to earn cool rewards!")
-
-
-# CLEAR
-from collections import Counter
-
-
-def popular_words(text: str, words: list) -> dict:
-    popularity = Counter(text.lower().split())
-
-    result = {}
-    for word in words:
-        result[word] = popularity[word]
-
-    return result
