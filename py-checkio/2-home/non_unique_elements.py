@@ -18,6 +18,7 @@ Precondition:
 0 < len(data) < 1000
 """
 
+
 def checkio(data):
     # tmp = []
     # for d in data:
@@ -27,13 +28,16 @@ def checkio(data):
     # return tmp
     return [d for d in data if data.count(d) > 1]
 
+
 # CLEAR
 checkioX = lambda d: [x for x in d if d.count(x) > 1]
 checkioY = lambda d: list(filter(lambda i: d.count(i) - 1, d))
 
+
 # SPEEDY
 def checkio2(data):
     from collections import Counter
+
     nonunique = Counter(data) - Counter(set(data))
     return [x for x in data if x in nonunique]
 

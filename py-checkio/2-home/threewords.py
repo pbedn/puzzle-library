@@ -9,6 +9,8 @@ Input: A string with words.
 
 Output: The answer as a bool.
 """
+
+
 def checkio(words):
     counter = 0
     for word in words.split():

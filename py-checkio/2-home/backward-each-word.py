@@ -4,6 +4,8 @@ Input: A string.
 Output: A string.
 Precondition: The line consists only from alphabetical symbols and spaces.
 """
+
+
 def backward_string_by_word(text: str) -> str:
     new_text, new_word = "", ""
     word_end_idx = 0
@@ -25,7 +27,7 @@ assert backward_string_by_word("world") == "dlrow"
 assert backward_string_by_word("hello world") == "olleh dlrow"
 assert backward_string_by_word("hello   world") == "olleh   dlrow"
 assert backward_string_by_word("welcome to a game") == "emoclew ot a emag"
-assert backward_string_by_word('olleH Hello') == 'Hello olleH'
-assert backward_string_by_word('ha ha ha   this is cool') == 'ah ah ah   siht si looc'
+assert backward_string_by_word("olleH Hello") == "Hello olleH"
+assert backward_string_by_word("ha ha ha   this is cool") == "ah ah ah   siht si looc"
 
 print("The mission is done! Click 'Check Solution' to earn rewards!")

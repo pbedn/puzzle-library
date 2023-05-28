@@ -15,6 +15,8 @@ How it is used: This is a simple example of operations using strings and sequenc
 Precondition:
 0 < len(phrases) < 42
 """
+
+
 def left_join(phrases):
     """
     Join strings and replace "right" to "left"

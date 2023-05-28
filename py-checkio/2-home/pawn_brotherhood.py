@@ -27,6 +27,7 @@ Precondition:
 0 < pawns ≤ 8
 """
 
+
 def create_new_pawn(new_letter, new_index):
     if new_letter and new_index:
         return "{}{}".format(new_letter, new_index)
@@ -45,6 +46,7 @@ def safe_pawns(pawns):
         if lower_left_pawn or lower_right_pawn:
             count += 1
     return count
+
 
 # Clear
 def safe_pawns(pawns):

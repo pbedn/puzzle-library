@@ -28,6 +28,7 @@ assert list(duplicate_zeros([100, 10, 0, 101, 1000])) == [100, 10, 0, 0, 101, 10
 """
 from collections.abc import Iterable
 
+
 # First version
 def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
     l = list()
@@ -37,6 +38,7 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
             l.append(d)
     return l
 
+
 # Generator version
 def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
     for d in donuts:
@@ -44,11 +46,24 @@ def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
         if not d:
             yield d
 
+
 print("Example:")
 print(list(duplicate_zeros([1, 0, 2, 3, 0, 4, 5, 0])))
 
 # These "asserts" are used for self-checking
-assert list(duplicate_zeros([1, 0, 2, 3, 0, 4, 5, 0])) == [1, 0, 0, 2, 3, 0, 0, 4, 5, 0, 0]
+assert list(duplicate_zeros([1, 0, 2, 3, 0, 4, 5, 0])) == [
+    1,
+    0,
+    0,
+    2,
+    3,
+    0,
+    0,
+    4,
+    5,
+    0,
+    0,
+]
 assert list(duplicate_zeros([0, 0, 0, 0])) == [0, 0, 0, 0, 0, 0, 0, 0]
 assert list(duplicate_zeros([100, 10, 0, 101, 1000])) == [100, 10, 0, 0, 101, 1000]
 

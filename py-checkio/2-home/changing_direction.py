@@ -55,5 +55,3 @@ assert changing_direction([0]) == 0
 assert changing_direction([6, 6, 6, 4, 1, 2, 5, 9, 7, 8, 5, 9, 4, 2, 6]) == 7
 
 print("The mission is done! Click 'Check Solution' to earn rewards!")
-
-

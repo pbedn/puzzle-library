@@ -19,6 +19,7 @@ The input text will consists of English letters in uppercase and lowercase and w
 
 from collections import Counter
 
+
 def popular_words(text: str, words: list) -> dict:
     txt = text.lower().replace("\n", " ").split(" ")
     res = {}
@@ -29,9 +30,11 @@ def popular_words(text: str, words: list) -> dict:
             res[key] = value
     return res
 
+
 def popular_words(text: str, words: list) -> dict:
     ct = Counter(text.lower().replace("\n", " ").split(" "))
     return {word: ct.get(word, 0) for word in words}
+
 
 # CLEAR
 # def popular_words(text: str, words: list) -> dict:

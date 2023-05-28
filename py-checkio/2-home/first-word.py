@@ -16,7 +16,7 @@ Output: A string.
 
 def first_word(text: str) -> str:
     """
-        returns the first word in a given text.
+    returns the first word in a given text.
     """
     text = text.replace(",", " ")
     text = text.replace("...", " ")
@@ -31,7 +31,7 @@ def first_word(text: str) -> str:
     return text[0]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("Example:")
     print(first_word("Hello world"))
 

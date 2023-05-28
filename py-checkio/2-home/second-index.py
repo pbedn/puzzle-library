@@ -8,6 +8,7 @@ Input: Two strings.
 Output: Int or None
 """
 
+
 def second_index(text: str, symbol: str):
     """
     returns the second index of a symbol in a given text
@@ -21,10 +22,11 @@ def second_index(text: str, symbol: str):
         seen.append(t)
     return None
 
+
 # Clear
 def second_index(text: str, symbol: str):
     """
-        returns the second index of symbol in a given text
+    returns the second index of symbol in a given text
     """
     try:
         return text.index(symbol, text.index(symbol) + 1)
